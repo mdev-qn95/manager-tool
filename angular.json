@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "manager-tool"
+    }
+  },
+  "defaultProject": "manager-tool",
+  "cli": {
+    "analytics": false
+  }
 }
