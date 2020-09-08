@@ -1,0 +1,7 @@
+
+<input type="text" class="form-control" id="newServer" placeholder="New server at here" [(ngModel)]="serverName"><br>
+<button type="button" class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<button type="button" class="btn btn-warning" [disabled]="serverName === ''" (click)="serverName = ''">Reset</button><br><br>
+
+<p>{{ serverCreationStatus }}</p>
+<app-server></app-server>
