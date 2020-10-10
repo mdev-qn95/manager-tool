@@ -1,18 +1,24 @@
 <div class="row">
     <div class="col-md-12">
-        <div class="card mb-3" style="max-width: 540px;" *ngFor="let recipe of recipes">
-            <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img [src]="recipe.imagePath" class="card-img" alt="{{ recipe.name }}">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ recipe.name }}</h5>
-                        <p class="card-text">{{ recipe.description }}</p>
-                        <p class="card-text"><small class="text-muted">Created at {{ recipe.timeCreate }}</small></p>
+        <button type="button" class="btn btn-success">New Recipe</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-12">
+        <ul class="list-group" *ngFor="let recipe of recipes">
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h5>{{ recipe.name }}</h5>
+                        <h7>{{ recipe.description }}</h7>
+                    </div>
+                    <div class="col-md-4">
+                        <img [src]="recipe.imagePath" alt="{{ recipe.name }}" style="max-width: 100px;">
                     </div>
                 </div>
-            </div>
-        </div>
+            </li>
+        </ul>
+        <app-recipe-item></app-recipe-item>
     </div>
 </div>
