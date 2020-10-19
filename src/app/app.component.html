@@ -1,16 +1,16 @@
 <!-- App 1 -->
-<!-- <app-header></app-header>
+<app-header (featureSelected)="onNavigate($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes></app-recipes>
-      <app-shoping-list></app-shoping-list>
+      <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
+      <app-shoping-list *ngIf="loadedFeature !== 'recipe'"></app-shoping-list>
     </div>
   </div>
-</div> -->
+</div>
 
 <!-- App 2 -->
-<div class="container">
+<!-- <div class="container">
   <app-cockpit (serverCreated)="onServerAdded($event)" (bpCreated)="onBlueprintAdded($event)"></app-cockpit>
   <hr>
   <div class="row">
@@ -18,4 +18,4 @@
       <app-server-element *ngFor="let serverElement of serverElements" [srvElement]="serverElement"></app-server-element>
     </div>
   </div>
-</div>
+</div> -->
