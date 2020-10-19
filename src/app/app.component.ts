@@ -9,7 +9,7 @@ export class AppComponent {
   /***  App 1 ***/
 
   /***  App 2 ***/
-  serverElements = [{type: 'server', name: 'Testserver', content: 'Just a test!'}]
+  serverElements = [{type: 'server', name: 'Server 1', content: 'Đang hoạt động bình thường'}]
 
   onServerAdded(serverData: {serverName: string, serverContent: string}) {
     this.serverElements.push({
